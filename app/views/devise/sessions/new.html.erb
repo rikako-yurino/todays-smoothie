@@ -1,26 +1,52 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
+<div class="main">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="sign" >log in</div>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%#= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form1 un", placeholder:"email" %>
+    </div>
+
+    <div class="field">
+      <%#= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class:"form1 un", placeholder:"password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class:" submit" %>
     </div>
   <% end %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+<div class="main">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="sign" >log in</div>
+    <div class="field">
+      <%#= f.label :nickname %><br />
+      <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname", class:"form1 un", placeholder:"nickname" %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="field">
+      <%#= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form1 un", placeholder:"email" %>
+    </div>
+
+    <div class="field">
+      <%#= f.label :password %>
+      <%= f.password_field :password, autocomplete: "new-password", class:"form1 un", placeholder:"password" %>
+    </div>
+
+    <div class="field">
+      <%#= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form1 un", placeholder:"password confirmation" %>
+    </div>
+
+    <div class="field">
+      <%#= f.label :password_confirmation %><br />
+      <%= f.text_area :profile, autocomplete: "profile", class:"form1 un", placeholder:"profile" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", class:" submit" %>
+    </div>
+  <% end %>
+</div>

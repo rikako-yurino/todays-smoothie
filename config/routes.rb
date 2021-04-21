@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/index'
   devise_for :users
-  root to: 'users#index'
+  root to: 'smoothies#index'
+  resources :users, only: [:show]
+  resources :smoothies, only: [:index, :new]
 end

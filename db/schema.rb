@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_21_012655) do
+ActiveRecord::Schema.define(version: 2021_04_21_060316) do
+
+  create_table "foodstuffs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "foodstuff", null: false
+    t.string "quantity"
+    t.bigint "smoothie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["smoothie_id"], name: "index_foodstuffs_on_smoothie_id"
+  end
+
+  create_table "smoothies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "content", null: false
+    t.integer "efficacy_a_id"
+    t.integer "efficacy_b_id"
+    t.integer "season_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_smoothies_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +47,6 @@ ActiveRecord::Schema.define(version: 2021_04_21_012655) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "foodstuffs", "smoothies", column: "smoothie_id"
+  add_foreign_key "smoothies", "users"
 end
