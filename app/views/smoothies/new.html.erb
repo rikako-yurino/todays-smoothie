@@ -1,34 +1,49 @@
-<div class="main">
+<div class="new-smoothie-main">
   <%= form_with(model: @smoothie_foodstuffs, local: true) do |f|%>
-    <%= render "devise/shared/error_messages", resource: resource %>
+
     <div class="sign" >new smoothie</div>
     <div class="field">
-      <%#= f.label :nickname %><br />
-      <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname", class:"form1 un", placeholder:"nickname" %>
+      <%= f.label :title %><br />
+      <%= f.text_area :title, autofocus: true,  class:"form1 un", placeholder:"タイトル" %>
     </div>
 
     <div class="field">
-      <%#= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form1 un", placeholder:"email" %>
+      <%= f.label :content %><br />
+      <%= f.text_area :content, autofocus: true,  class:"form1 un", placeholder:"説明" %>
     </div>
 
     <div class="field">
-      <%#= f.label :password %>
-      <%= f.password_field :password, autocomplete: "new-password", class:"form1 un", placeholder:"password" %>
+      <%= f.label :efficacy_a_id %>
+      <%= f.collection_select(:category_id, Efficacy.all, :id, :name, {}, {class:"select-box form1 un"}) %>
     </div>
 
     <div class="field">
-      <%#= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form1 un", placeholder:"password confirmation" %>
+      <%= f.label :season_id %><br />
+      <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box form1 un"}) %>
     </div>
 
     <div class="field">
-      <%#= f.label :password_confirmation %><br />
-      <%= f.text_area :profile, autocomplete: "profile", class:"form1 un", placeholder:"profile" %>
+      <%= f.label :foodstuff %><br />
+      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :foodstuff %><br />
+      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :foodstuff %><br />
+      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :foodstuff %><br />
+      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up", class:" submit" %>
+      <%= f.submit "Post", class:" submit" %>
     </div>
   <% end %>
 </div>
