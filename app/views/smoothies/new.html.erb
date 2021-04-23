@@ -2,44 +2,46 @@
   <%= form_with(model: @smoothie_foodstuffs, local: true) do |f|%>
 
     <div class="sign" >new smoothie</div>
-    <div class="field">
-      <%= f.label :title %><br />
-      <%= f.text_area :title, autofocus: true,  class:"form1 un", placeholder:"タイトル" %>
+    <div class="post-field">
+      <div class="form-sign" >title</div>
+      <%= f.text_area :title, autofocus: true,  class:"form2  un", placeholder:"タイトル" %>
     </div>
 
-    <div class="field">
-      <%= f.label :content %><br />
-      <%= f.text_area :content, autofocus: true,  class:"form1 un", placeholder:"説明" %>
+    <div class="post-field">
+      <div class="form-sign" >content</div>
+      <%= f.text_area :content, autofocus: true,  class:"form2  un", placeholder:"説明" %>
     </div>
 
-    <div class="field">
-      <%= f.label :efficacy_a_id %>
-      <%= f.collection_select(:category_id, Efficacy.all, :id, :name, {}, {class:"select-box form1 un"}) %>
+    <div class="post-field">
+    <div class="form-sign" >efficacy</div>
+      <%= f.collection_select(:category_id, Efficacy.all, :id, :name, {}, {class:"select-box form2 un"}) %>
     </div>
 
-    <div class="field">
-      <%= f.label :season_id %><br />
-      <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box form1 un"}) %>
+    <div class="post-field">
+      <div class="form-sign" >season</div>
+      <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box form2 un"}) %>
     </div>
 
-    <div class="field">
-      <%= f.label :foodstuff %><br />
-      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    <div class="post-field2">
+      <div class="form-sign" >foodstuff</div>
+      <%= f.text_area :foodstuff,  class:"form3 un2", placeholder:"材料" %>
+      <%= f.text_area :quantity,  class:"form3 un2", placeholder:"量" %>
     </div>
-
-    <div class="field">
-      <%= f.label :foodstuff %><br />
-      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    <div class="post-field2">
+      <%= f.text_area :foodstuff,  class:"form3 un2", placeholder:"材料" %>
+      <%= f.text_area :quantity,  class:"form3 un2", placeholder:"量" %>
     </div>
-
-    <div class="field">
-      <%= f.label :foodstuff %><br />
-      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    <div class="post-field2">
+      <%= f.text_area :foodstuff,  class:"form3 un2", placeholder:"材料" %>
+      <%= f.text_area :quantity,  class:"form3 un2", placeholder:"量" %>
     </div>
-
-    <div class="field">
-      <%= f.label :foodstuff %><br />
-      <%= f.text_area :foodstuff,  class:"form1 un", placeholder:"材料" %><%= f.text_area :quantity,  class:"form1 un", placeholder:"量" %>
+    <div class="post-field2">
+      <%= f.text_area :foodstuff,  class:"form3 un2", placeholder:"材料" %>
+      <%= f.text_area :quantity,  class:"form3 un2", placeholder:"量" %>
+    </div>
+    <div class="post-field2">
+      <%= f.text_area :foodstuff,  class:"form3 un2", placeholder:"材料" %>
+      <%= f.text_area :quantity,  class:"form3 un2", placeholder:"量" %>
     </div>
 
     <div class="actions">
