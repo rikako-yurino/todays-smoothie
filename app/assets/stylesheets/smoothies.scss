@@ -93,7 +93,7 @@
 
 .new-smoothie-main{
   background-color: #ffc0f6;
-  width: 700px;
+  width: 600px;
   height: 190vh;
   margin: 7em auto;
   border-radius: 1.5em;
@@ -107,14 +107,11 @@
   font-size: 18px;
   text-align: center;
   width: 30px;
-  height: 50px;
+  height: 20px;
   letter-spacing: 1px;
-  padding: 10px;
+  padding-left: 43%;
   box-sizing: border-box;
   margin-top: 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  margin-bottom: 27px;
   font-family: 'Ubuntu', sans-serif;
 }
 .form-sign2 {
@@ -137,7 +134,7 @@
 }
 
 .post-field {
-  display: flex;
+  display:block;
 }
 
 .form2 {
@@ -155,6 +152,7 @@
   outline: none;
   box-sizing: border-box;
   border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-left: 70px;
   margin-top: 20px;
   margin-bottom: 50px;
   font-family: 'Ubuntu', sans-serif;
@@ -174,7 +172,27 @@
   outline: none;
   box-sizing: border-box;
   border: 2px solid rgba(0, 0, 0, 0.02);
-  margin-left: 50px;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  resize: none;
+}
+.form4 {
+  width: 200px;
+  height: 50px;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: #fff;
+  background: rgba(136, 126, 126, 0.04);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 50px;
   font-family: 'Ubuntu', sans-serif;
