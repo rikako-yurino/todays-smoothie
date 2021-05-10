@@ -1,3 +1,223 @@
-// Place all the styles related to the smoothies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header-wrapper{
+  width: 100%;
+  height: 30vh;
+}
+
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lists-right {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.lists-right li {
+  padding: 10px 30px;
+}
+
+.menu-text {
+  font-weight: bold;
+  font-size: 30px;
+  color: #d8ffd1;
+  text-decoration: none!important;
+  font-weight:bold;
+	padding:32px 24px;
+}
+
+.menu-text:hover {
+  color: #fff;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.bubbly-button {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffc0f6;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ffc0f6 20%, transparent 30%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ffc0f6 15%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ffc0f6 15%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%), radial-gradient(circle, #ffc0f6 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #fda5f0;
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+
+
+.new-smoothie-main{
+  background-color: #ffc0f6;
+  width: 600px;
+  height: 190vh;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.form-sign {
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 30px;
+  height: 20px;
+  letter-spacing: 1px;
+  padding-left: 43%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.form-sign2 {
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 30px;
+  height: 50px;
+  letter-spacing: 1px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.post-field {
+  display:block;
+}
+
+.form2 {
+  width: 76%;
+  height: 50px;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: #fff;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-left: 70px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.form3 {
+  width: 200px;
+  height: 50px;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: #fff;
+  background: rgba(136, 126, 126, 0.04);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  resize: none;
+}
+.form4 {
+  width: 200px;
+  height: 50px;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: #fff;
+  background: rgba(136, 126, 126, 0.04);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: 'Ubuntu', sans-serif;
+  resize: none;
+}
+
+ .un2 {
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: #fff;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  }
+
+  .un2:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    background-color: #fff;
+    
+  }

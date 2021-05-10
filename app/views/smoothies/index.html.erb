@@ -1,9 +1,1 @@
 <%= render "shared/header" %>
-<h1>Today's Smoothie</h1>
-<%= link_to "join", new_user_registration_path %>
-<%= link_to "log in", new_user_session_path %>
-
-<% if user_signed_in? %>
-  <p><%= "#{current_user.nickname}さん" %></p>
-  <%= link_to "log out",  destroy_user_session_path, method: :delete %>
-<% end%>

@@ -1,10 +1,11 @@
 body {
-  background-color: #CFFFC5;
+  margin: 0;
+  background-color: #fff;
   font-family: 'Ubuntu', sans-serif;
 }
 
 .main {
-  background-color: #d8ffd1;
+  background-color: #ffc0f6;
   width: 700px;
   height: 700px;
   margin: 7em auto;
@@ -78,7 +79,7 @@ font-family: 'Ubuntu', sans-serif;
 cursor: pointer;
   border-radius: 5em;
   color: #fff;
-  background: linear-gradient(to right, #ffc6a4, #ff8989);
+  background: linear-gradient(to right, #86dbcb, #239656);
   border: 0;
   padding-left: 40px;
   padding-right: 40px;
